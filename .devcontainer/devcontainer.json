@@ -1,0 +1,28 @@
+{
+    // A friendly name for your container (shows up in the VS Code UI)
+    "name": "idgs11 Angular Dev Container",
+    // Use the TypeScript Node base image from the Microsoft devcontainers library
+    "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+    // Forward the Angular dev server port so you can test in a browser
+    "forwardPorts": [4200],
+
+    // Install Angular CLI globally and your project dependencies
+    "postCreateCommand": "npm install -g @angular/cli && npm install",
+    // VS Code-specific settings & extension recommendations
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                // Angular language tooling
+                "Angular.ng-template",
+                // Linting
+                "dbaeumer.vscode-eslint"
+            ],
+            "settings": {
+                // Optional: set shell, linting, or formatting settings
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "editor.formatOnSave": true
+            }
+        }
+    }
+  }
+  
