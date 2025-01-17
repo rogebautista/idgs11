@@ -1,0 +1,22 @@
+section {
+    margin: 2rem auto;
+    width: 300px;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form div {
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    padding: 0.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }

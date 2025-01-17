@@ -4,10 +4,13 @@
     // Use the TypeScript Node base image from the Microsoft devcontainers library
     "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
     // Forward the Angular dev server port so you can test in a browser
-    "forwardPorts": [4200],
-
+    "forwardPorts": [
+        4200
+    ],
     // Install Angular CLI globally and your project dependencies
     "postCreateCommand": "npm install -g @angular/cli && npm install",
+    // Automatically start 'ng serve' once the container is up
+    "postStartCommand": "ng serve --host 0.0.0.0 --port 4200",
     // VS Code-specific settings & extension recommendations
     "customizations": {
         "vscode": {
@@ -24,5 +27,4 @@
             }
         }
     }
-  }
-  
+}
